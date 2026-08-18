@@ -1,0 +1,27 @@
+# local.rules — your Snort rule file for the Snort NIDS Lab.
+#
+# This is the ONE file you edit in this lab. snort.lua already loads it for you,
+# so any rule you add here fires the next time you run Snort against a pcap.
+#
+# ---------------------------------------------------------------------------
+# Snort rule anatomy (read this once):
+#
+#   action  protocol  src_ip  src_port  ->  dst_ip  dst_port  ( options )
+#   ------  --------  ------------------      ------------------  ---------
+#   |       |         |                       |                   |
+#   |       |         where it comes from     where it is going   what to match on
+#   |       tcp / udp / icmp / ip                                 + msg, sid, rev...
+#   alert / log / drop ...
+#
+# Every rule needs a unique `sid:` (signature ID). Use sids >= 1000000 for your
+# own local rules — that range is reserved for exactly this.
+# ---------------------------------------------------------------------------
+
+# Example / starter rule: alert on ANY ICMP packet (e.g. a ping).
+# This is the classic "does my sensor work?" rule. It fires on the ICMP echo
+# traffic in /opt/snort-lab/pcaps/icmp.pcap.
+alert icmp any any -> any any ( msg:"LAB ICMP packet seen"; sid:1000001; rev:1; )
+
+# ---------------------------------------------------------------------------
+# Add your own rules below this line.
+# ---------------------------------------------------------------------------
