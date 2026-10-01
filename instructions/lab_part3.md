@@ -155,7 +155,7 @@ A complete scope accounts for **7 requests**: **6 were served** and **1 missed**
 > ```bash
 > cd ~/ftp_folder && node attack.js "http://localhost:8888/%2e%2e%2f%2e%2e%2f%2e%2e%2fetc/shadow"
 > ```
-> The server decodes it and hands you `/etc/shadow` all the same — **the exploit still works** — but the bytes on the wire are now `%2e%2e%2f`, not `../`, so your rule never fires and the attacker is invisible to it. Write a second rule (e.g. `content:"%2e%2e%2f"; nocase;`) that also catches the encoded form. This is the whole story of signature detection: it's an arms race, and one `content` match is always a move behind a motivated attacker.
+> The server decodes it and hands you `/etc/shadow` all the same — **the exploit still works** — but the bytes on the wire are now `%2e%2e%2f`, not `../`, so your rule never fires and the attacker is invisible to it. Write a second rule (e.g. `content:"%2e%2e%2f",nocase;`) that also catches the encoded form. This is the whole story of signature detection: it's an arms race, and one `content` match is always a move behind a motivated attacker.
 
 ### Step 6: Remediation — write it up for the report
 
