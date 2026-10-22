@@ -38,3 +38,9 @@ In the provided Docker container, you will find all the necessary tools and depe
 - A vulnerable FTP service - the directory-traversal target you'll attack and then detect
 
 The lab runs with **no outbound network** — everything it needs is inside the container.
+
+## License
+
+The code in this repo (Dockerfile, Makefile, scripts, configuration) is licensed under the **Apache License 2.0**. The lab instructions and other teaching material are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**.
+
+You are free to use, adapt, and run this lab in your own courses, including commercially, as long as you credit CodePath and indicate what you changed. See [LICENSE](./LICENSE) for the terms that govern.
