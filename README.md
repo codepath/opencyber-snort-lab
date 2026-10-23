@@ -41,6 +41,8 @@ The lab runs with **no outbound network** — everything it needs is inside the 
 
 ## License
 
-The code in this repo (Dockerfile, Makefile, scripts, configuration) is licensed under the **Apache License 2.0**. The lab instructions and other teaching material are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**.
+The code in this repo (Dockerfile, Makefile, scripts, configuration) is licensed under the **Apache License 2.0**, see [LICENSE](./LICENSE). The lab instructions and other teaching material are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**, see [LICENSE-CONTENT](./LICENSE-CONTENT).
 
-You are free to use, adapt, and run this lab in your own courses, including commercially, as long as you credit CodePath and indicate what you changed. See [LICENSE](./LICENSE) for the terms that govern.
+You are free to use, adapt, and run this lab in your own courses, including commercially, as long as you credit CodePath and indicate what you changed.
+
+This lab installs and runs third-party software that carries its own licenses. Those licenses govern that software.
